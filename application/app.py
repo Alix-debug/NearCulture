@@ -69,6 +69,32 @@ def Traveler():
 		result_query += data_traveler['results']["bindings"] 
 	#results
 	return render_template("index.html",content = response.json())
+@app.route("/Libraries")
+def Library():
+	query = """
+
+	PREFIX schema: <http://schema.org/>
+PREFIX sc: <http://purl.org/science/owl/sciencecommons/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?identifier ?name ?longitude ?latitude WHERE {
+		?Instance 
+		rdf:type schema:Library; schema:name ?name; 			       
+								schema:identifier ?identifier;
+								schema:longitude ?longitude;
+								schema:latitude ?latitude;
+		} LIMIT 100
+
+	"""
+	header = {'Content-type': 'application/sparql-query'}
+	response = requests.post('http://localhost:3030/Libraries/', data=query, headers = header)
+	data_library = response.json()
+	result_query="<tr>"
+	for i in range(0, len(data_library['results']["bindings"])) :
+		result_query += "<td>"+data_library['results']["bindings"][i]["name"]["value"]+"</td>"
+	#results
+	result_query+="</tr>"
+	return render_template("index.html",content = result_query)
 
 
 @app.route("/queries")

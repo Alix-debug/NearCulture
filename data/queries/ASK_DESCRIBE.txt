@@ -1,0 +1,18 @@
+
+#### ASK
+PREFIX schema: <http://schema.org/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ex: <http://example.org/>
+PREFIX sc: <http://purl.org/science/owl/sciencecommons/>
+
+
+ASK {?x schema:addressLocality "Saint-Denis"}
+
+#### DESCRIBE
+PREFIX schema: <http://schema.org/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ex: <http://example.org/>
+PREFIX sc: <http://purl.org/science/owl/sciencecommons/>
+
+
+DESCRIBE ?x WHERE {?x schema:name "Centre de Ressources Documentaires du centre de formation ESPE de Chartres"}

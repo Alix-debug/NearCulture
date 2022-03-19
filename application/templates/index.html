@@ -1,5 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Test</h1>
-<p>{{content}}</p>
+<h1></h1>
+
+<table>
+    {% for t in content %}
+        <tr>
+        {% for i in t %}
+            <td>{{ i }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+     </table>
 {% endblock %}

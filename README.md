@@ -12,12 +12,10 @@ Made by Alix Petitcol, Françoise Ruch and Marine Sublet.
 - 💻 [Used Technologies](#-used-technologies)
   1. Fuseki as TripleStore
   2. Python Flask application
--  [Application architecture](#-application-architecture)
+- 👩‍💻 [Application](#-application)
   1.  Data Preprocessing and import
   2.  Ontology with Protégé
   3.  Querying the triplestore
-      - Required queries
-      - Propose 5 SPARQL queries
 
 ## 🎯 Project requirements
 
@@ -44,7 +42,7 @@ Then, you will be able to run your fuseki triplestore at the following address :
 
 3. fill the database using the given .ttl files in the "import" folder. Name the databases respectively Museums, Libraries, Trips, Travelers.  
 
-## 👨‍💻 Used Technologies
+## 💻 Used Technologies
 
 ### 1. Fuseki as TripleStore
 
@@ -55,7 +53,7 @@ In our case, we use it as a standalone server in order to query the server with 
 
 We chose to implement a flask application to interact with our Fuseki triplestore. Flask is quick and easy to learn, so it was perfect regarding the project's deadline.
 
-## ⚙️ Application architecture
+## 👩‍💻 Application
 
 ### 1. Data Preprocessing and import
 
@@ -111,11 +109,12 @@ outfile.close()
 
 In order to create our own ontology, we have created all our entities - POI (libraries - Museums), the trips and the travelers - using protégé. Then, because the owl format that was containing our ontology was not supported for the upload step in the fuseki triplestore we have convert the ontology in a .ttl file using an online converter.
 
-### 4. Querying the triplestore
+### 3. Querying the triplestore
 
 To set museums and libraries datasets in the triplestore we have reused the Schema.org vocabuary. We have also set our own vocubulary based on our ontology. Here are the queries we have implemented for this project. 
 
 1/List the instances of the geolocated POI :
+
 We have chosen to display the list of the POI : museums, using the follwing query, but also the libraries and the travalers.
 We return multiple information about the name, the localisation of the POI and its latitude and longitude.
 
@@ -137,6 +136,7 @@ We return multiple information about the name, the localisation of the POI and i
 ```
 
 2/List the name of all Museums For each one, display its city.
+
 This query is described in the Museum tab of the navigation bar. 
 We proposed at least 9 different located areas for each POI, however we can easily add new location item in the html code.
 
@@ -174,8 +174,8 @@ SELECT ?description ?itinerary ?name WHERE { ?Instance rdf:type :trip; :descript
 ```
 
 4/List the name of travellers older than X years.
-We decided to implement an ASK query that returns True or False depending on the traveler's age. If the traveler is older than an age, chosen in the list, it returns true.
 
+We decided to implement an ASK query that returns True or False depending on the traveler's age. If the traveler is older than an age, chosen in the list, it returns true.
 ```SPARQL
 "prefix :      <http://www.semanticweb.org/protegee> 
 

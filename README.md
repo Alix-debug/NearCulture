@@ -237,6 +237,7 @@ d.	A query that contains an ASK query form
 
 		ASK WHERE{?Instance :age ?age FILTER (?age >"""+region+""")}
 ```
+This query is accessible at the ... tab in the nav bar.
 
 e.	A query that contains a DESCRIBE query for (export) : described the data in rdf 
 Query that exports all the libraries :

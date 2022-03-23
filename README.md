@@ -23,9 +23,9 @@ Made by Alix Petitcol, Françoise Ruch and Marine Sublet.
 
 · Setup a triplestore. The simplest is to use Apache Jena Fuseki.
 
-· Define or reuse a vocabulary for describing bicycle-sharing stations and their availability using Protégé.
+· Define or reuse a vocabulary for describing museums and libraries using Protégé.
 
-· Convert static data about monuments and libraries into RDF, and load the resulting data to the triplestore. You can simply generate an RDF file that you load manually to the triplestore, or add the RDF programmatically using SPARQL Update queries.
+· Convert static data about museums and libraries into RDF, and load the resulting data to the triplestore. You can simply generate an RDF file that you load manually to the triplestore, or add the RDF programmatically using SPARQL Update queries.
 
 · Make an application that will allow one to select a city (in a list or on a map) and get the corresponding museums/libraries. There resulting list should be available in HTML with RDFa. You may also make the data available in RDF (Turtle, RDF/XML, or JSON-LD) based on content negotiation.
 

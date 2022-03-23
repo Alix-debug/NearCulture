@@ -197,7 +197,7 @@ PREFIX ex: <http://example.org/>
 SELECT ?name ?id ?url ?long ?lat WHERE {?Instance rdf:type schema:Library;schema:name ?name; schema:identifier ?id . OPTIONAL {?Instance schema:url ?url . } OPTIONAL {?Instance schema:longitude ?long; schema:latitude ?lat .}} LIMIT 100
 ```
 
-This query is accessible at the ... tab in the nav bar.
+This query is accessible at the "Queries 2" tab in the nav bar.
 
 b.	A query that contains at least 2 alternatives and conjunctions. 
 Our query returns names of both people and trips.
@@ -216,7 +216,7 @@ PREFIX schema: <http://schema.org/>
 	{ ?Instance rdf:type :traveler. ?Instance :familyName ?description . }
 	}
 ```
-This query is accessible at the ... tab in the nav bar.
+This query is accessible at the "Queries 4" tab in the nav bar.
 
 c.	A query that contains a CONSTRUCT query form
 Our query returns a new schema with all museums' names.
@@ -228,7 +228,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 CONSTRUCT{ ?x schema:Museum ?name} WHERE {?x schema:name ?name}
 ```
-This query is accessible at the ... tab in the nav bar.
+This query is accessible at the "Queries 5" tab in the nav bar.
 
 d.	A query that contains an ASK query form 
 
@@ -237,7 +237,7 @@ d.	A query that contains an ASK query form
 
 		ASK WHERE{?Instance :age ?age FILTER (?age >"""+region+""")}
 ```
-This query is accessible at the ... tab in the nav bar.
+This query is accessible at the "Queries 3" tab in the nav bar.
 
 e.	A query that contains a DESCRIBE query for (export) : described the data in rdf 
 Query that exports all the libraries :
@@ -251,6 +251,5 @@ PREFIX sc: <http://purl.org/science/owl/sciencecommons/>
 DESCRIBE ?Instance WHERE {?Instance rdf:type schema:Library; schema:name ?x}
 
 ```
-This query is accessible at the ... tab in the nav bar.
-
+This query is accessible at the end of Museums, Libraries, Travelers and Trips tab in the nav bar, at the button "export".
 

@@ -107,7 +107,15 @@ outfile.close()
 
 ### 2. Ontology with Protégé
 
-In order to create our own ontology, we have created all our entities - POI (libraries - Museums), the trips and the travelers - using protégé. Then, because the owl format that was containing our ontology was not supported for the upload step in the fuseki triplestore we have convert the ontology in a .ttl file using an online converter.
+
+In order to create our ontology, we have created all our entities - POI (libraries - Museums), the trips and the travelers - using protégé. 
+We have reused the vocabulary available in schema.org:
+
+[protégé load existing ontology](https://scontent-cdg2-1.xx.fbcdn.net/v/t1.15752-9/276126341_1100068500557521_4643196109917015798_n.png?_nc_cat=100&ccb=1-5&_nc_sid=ae9488&_nc_ohc=w1XRP3WlapkAX-XKaQs&_nc_ht=scontent-cdg2-1.xx&oh=03_AVJvLBajk2TxxDy26tjvSX67C81I4bnmLMg-5guiJRCoJw&oe=6263E0E9 "Load Schema.org ontology").
+
+[protégé load existing ontology](https://scontent-cdg2-1.xx.fbcdn.net/v/t1.15752-9/276156772_1395969094169730_5623002004751552552_n.png?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_ohc=JwXkl6kMQs4AX-ilSgf&_nc_ht=scontent-cdg2-1.xx&oh=03_AVLaew9y7U3Y0QK5-zrr-uj7PRRr_4FM_F441pQRLhs1rA&oe=62623153 "Load Schema.org ontology").
+
+[protégé reused schema.org vocabulary](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/276175185_1141055669976929_1979857176565838410_n.png?_nc_cat=110&ccb=1-5&_nc_sid=ae9488&_nc_ohc=oSurRO27TVoAX9HoDHm&_nc_ht=scontent-cdt1-1.xx&oh=03_AVJEUyfmqFgTfh3N-iyKoDsTsyolOVrlbZTI1eL4YItTsg&oe=6263185E "reuse Schema.org properties").
 
 ### 3. Querying the triplestore
 
